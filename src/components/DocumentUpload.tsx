@@ -1,14 +1,18 @@
-export default function DocumentUpload() {
-    return (
-      <section className="upload-section">
-        <h2>Document Uploads</h2>
-        <div className="upload-box">
-          <p>Drop files here</p>
-          <p>Supported format: PNG, JPG</p>
-          <button>Browse Files</button>
-          <button>Upload</button>
-        </div>
-      </section>
-    );
-  }
-  
+'use client';
+
+import { FileUpload } from './ui/file-upload';
+
+function DocumentUpload() {
+  const handleFileChange = (files: File[]) => {
+    console.log('Files uploaded:', files);
+    // Handle files here
+  };
+
+  return (
+    <div className="p-4">
+      <FileUpload onChange={handleFileChange} />
+    </div>
+  );
+}
+
+export default DocumentUpload;

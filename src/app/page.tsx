@@ -7,6 +7,7 @@ import DocumentUpload from '../components/DocumentUpload';
 import Tracker from '@/components/Tracker';
 import OfflineAccess from '@/components/OfflineAccess';
 import Divider from '@/components/Divider';
+import CollapsibleChatbot from '@/components/Chatbot';
 
 export default function Home() {
     return (
@@ -23,6 +24,7 @@ export default function Home() {
         <Tracker />
         <Divider width='medium'/>
         <OfflineAccess />
+        <CollapsibleChatbot />
         <Footer />
       </main>
     );
